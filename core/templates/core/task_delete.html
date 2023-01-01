@@ -1,0 +1,10 @@
+{% extends 'core/main_page.html' %}
+
+{% block content %}
+<form class="text-center" method="post">{% csrf_token %}
+
+<p>Are you sure want delete "{{ object }}"?</p>
+
+	<input class="btn btn-danger" type="submit" value="Confirm"> <a href="{% url 'tasks' %}" class="btn btn-warning">Back</a>
+</form>
+{% endblock %}
