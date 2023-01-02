@@ -13,7 +13,7 @@ class AddTasksFrom(ModelForm):
                     'name': 'text',
                     'id': 'text',
                     'type': 'text',
-                    'placeholder': 'Enter task here',
+                    'placeholder': 'Enter  here',
                     'required': True
                 }
             )

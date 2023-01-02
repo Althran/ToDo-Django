@@ -6,7 +6,7 @@ from django.utils.timezone import now
 class TaskTodo(models.Model):
 
     text = models.CharField(
-        max_length=25,
+        max_length=250,
         verbose_name='text'
     )
 
