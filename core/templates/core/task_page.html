@@ -1,0 +1,15 @@
+{% extends 'core/main_page.html' %}
+
+{% block content %}
+
+<h5>Description</h5>
+
+{{ addtask.text }}
+<br>
+<br>
+<h8>Date created:</h8>
+{{ addtask.date_created }}
+<br>
+<a href="{% url 'edit' addtask.id %}" class="btn btn-success ms-1">Edit</a>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'core/main_page.html' %}
+
+{% block content %}
+<form class="text-center" method="post">{% csrf_token %}
+
+    {{ form.as_p }}
+    <input class="btn btn-success ms-1" type="submit" value="Update"> <a href="{% url 'tasks' %}" class="btn btn-warning">Back</a>
+</form>
+{% endblock %}
