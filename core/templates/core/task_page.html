@@ -10,6 +10,6 @@
 <h8>Date created:</h8>
 {{ addtask.date_created }}
 <br>
-<a href="{% url 'edit' addtask.id %}" class="btn btn-success ms-1">Edit</a>
+<a href="{% url 'edit' addtask.id %}" class="btn btn-success ms-1">Edit</a> <a href="{% url 'tasks' %}" class="btn btn-warning">Back</a>
 
 {% endblock %}
