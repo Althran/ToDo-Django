@@ -43,10 +43,15 @@
                   {% for task in tasks %}
                   <th scope="row">{{ task.id }}</th>
                   <td>{{ task.text|truncatechars:15 }}</td>
-                  <td>{{ task.status }}</td>
+                  {% if task.status %}
+                  <td>Complete</td>
+                  {% endif %}
+                  {% if not task.status %}
+                  <td>In progress</td>
+                  {% endif %}
                   <td>
                     <a href="{% url 'delete' task.id %}" class="btn btn-danger">Delete</a>
-                    <a href="{% url 'update' task.id %}" class="btn btn-success ms-1">Update</a>
+                    <a href="{% url 'update' task.id %}" class="btn btn-success ms-1">Complete</a>
                     <a href="{% url 'view' task.id %}" class="btn btn-success ms-1">View</a>
                   </td>
                 </tr>
